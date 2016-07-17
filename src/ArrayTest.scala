@@ -1,4 +1,4 @@
-
+import Array._
 
 object ArrayTest {
   
@@ -11,7 +11,7 @@ object ArrayTest {
     
     var myList = Array(1.9,3.0,2.9,3.4);
     
-    var multiArray = Array[Int](3,3)
+    var multiArray = ofDim[Int](3,3)
     
     for(x <- myList){
         println(x)
@@ -34,6 +34,20 @@ object ArrayTest {
     
     
     //build a matirix
+    for(i<-0 to 2){
+      for(j<-0 to 2){
+        multiArray(i)(j) = j;
+      }
+    }
     
+    //print matrix
+    println("matrix");
+    for(i<-0 to 2){
+      for(j<-0 to 2){
+        print(multiArray(i)(j)+",");
+      }
+      println("");
+    }
+  
   }
 }
